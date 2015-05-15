@@ -1,5 +1,33 @@
-{{input value=this.model.handle}}
-{{input value=this.model.phoneNumber}}
-
-<button {{action 'continue' this.model}}>Continue</button>
-
+<div class="page-content login-screen-content">
+<div class="login-screen-title">Welcome</div>
+<form>
+  <div class="list-block">
+    <ul>
+      <li class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Username</div>
+          <div class="item-input">
+            {{input value=this.model.handle}}
+          </div>
+        </div>
+      </li>
+      <li class="item-content">
+        <div class="item-inner">
+          <div class="item-title label">Email address</div>
+          <div class="item-input">
+            {{input value=this.model.emailAddress}}
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="list-block">
+    <ul>
+      <li><a href="javascript:void(0);" {{ action 'continue' }} class="item-link list-button">Continue</a></li>
+    </ul>
+    <div class="list-block-label">
+      <p>Make sure to enter you correct email address.</p>
+    </div>
+  </div>
+</form>
+</div>

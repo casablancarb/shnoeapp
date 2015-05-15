@@ -7,6 +7,7 @@ export default Ember.Route.extend({
 
   actions: {
     continue: function(model) {
+      this.transitionTo('contacts.index');
       return false;
     }
   }

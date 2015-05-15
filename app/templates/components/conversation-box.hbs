@@ -1,0 +1,19 @@
+{{yield}}
+<div class="page-content messages-content">
+  <div class="messages"> <!-- Date stamp -->
+    <div class="messages-date">Sunday, Feb 9 <span>12:58</span></div>
+    {{#each conversation.messages as |message|}}
+    <!-- Sent message (by default - green and on right side) -->
+    <div class="message message-sent">
+      <!-- Bubble with text -->
+      <div class="message-text">{{message.message}}</div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+<div class="toolbar messagebar" style="">
+  <div class="toolbar-inner">
+    {{textarea placeholder="Message" class="" value=message}}
+    <a {{action 'sendMessage'}} href="javascript:void(0);" class="link">Send</a>
+  </div>
+</div>
